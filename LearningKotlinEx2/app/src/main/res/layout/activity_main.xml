@@ -12,11 +12,12 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:gravity="end|center_vertical"
-        android:text="0"
-        android:textSize="48sp"
         android:background="#E0E0E0"
+        android:gravity="end|center_vertical"
         android:padding="16dp"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="48sp"
         tools:ignore="HardcodedText" />
 
     <LinearLayout
@@ -33,13 +34,19 @@
             android:orientation="horizontal"
             tools:ignore="NestedWeights">
 
-            <Button android:text="CE" style="@style/CalcButton"
+            <Button
+                style="@style/CalcButton"
+                android:text="CE"
                 tools:ignore="HardcodedText,VisualLintButtonSize" />
             <Button android:text="C" style="@style/CalcButton"
                 tools:ignore="HardcodedText,VisualLintButtonSize" />
             <Button android:text="BS" style="@style/CalcButton"
                 tools:ignore="HardcodedText,VisualLintButtonSize" />
-            <Button android:text="/" style="@style/CalcButton"
+
+            <Button
+                style="@style/CalcButton"
+                android:hapticFeedbackEnabled="false"
+                android:text="/"
                 tools:ignore="HardcodedText,VisualLintButtonSize" />
         </LinearLayout>
 
@@ -49,11 +56,11 @@
             android:layout_weight="1"
             android:orientation="horizontal">
 
-            <Button android:text="7" style="@style/CalcButton"
+            <Button android:text="7" style="@style/CalcButtonNumber"
                 tools:ignore="HardcodedText,VisualLintButtonSize" />
-            <Button android:text="8" style="@style/CalcButton"
+            <Button android:text="8" style="@style/CalcButtonNumber"
                 tools:ignore="HardcodedText,VisualLintButtonSize" />
-            <Button android:text="9" style="@style/CalcButton"
+            <Button android:text="9" style="@style/CalcButtonNumber"
                 tools:ignore="HardcodedText,VisualLintButtonSize" />
             <Button android:text="x" style="@style/CalcButton"
                 tools:ignore="HardcodedText,VisualLintButtonSize" />
@@ -65,11 +72,11 @@
             android:layout_weight="1"
             android:orientation="horizontal">
 
-            <Button android:text="4" style="@style/CalcButton"
+            <Button android:text="4" style="@style/CalcButtonNumber"
                 tools:ignore="HardcodedText,VisualLintButtonSize" />
-            <Button android:text="5" style="@style/CalcButton"
+            <Button android:text="5" style="@style/CalcButtonNumber"
                 tools:ignore="HardcodedText,VisualLintButtonSize" />
-            <Button android:text="6" style="@style/CalcButton"
+            <Button android:text="6" style="@style/CalcButtonNumber"
                 tools:ignore="HardcodedText,VisualLintButtonSize" />
             <Button android:text="-" style="@style/CalcButton"
                 tools:ignore="HardcodedText,VisualLintButtonSize" />
@@ -81,11 +88,11 @@
             android:layout_weight="1"
             android:orientation="horizontal">
 
-            <Button android:text="1" style="@style/CalcButton"
+            <Button android:text="1" style="@style/CalcButtonNumber"
                 tools:ignore="HardcodedText,VisualLintButtonSize" />
-            <Button android:text="2" style="@style/CalcButton"
+            <Button android:text="2" style="@style/CalcButtonNumber"
                 tools:ignore="HardcodedText,VisualLintButtonSize" />
-            <Button android:text="3" style="@style/CalcButton"
+            <Button android:text="3" style="@style/CalcButtonNumber"
                 tools:ignore="HardcodedText,VisualLintButtonSize" />
             <Button android:text="+" style="@style/CalcButton"
                 tools:ignore="HardcodedText,VisualLintButtonSize" />
@@ -101,7 +108,7 @@
                 tools:ignore="HardcodedText,VisualLintButtonSize" />
 
             <Button
-                style="@style/CalcButton"
+                style="@style/CalcButtonNumber"
                 android:text="0"
                 tools:ignore="HardcodedText,DuplicateSpeakableTextCheck,VisualLintButtonSize" />
             <Button android:text="=" style="@style/CalcButton"
