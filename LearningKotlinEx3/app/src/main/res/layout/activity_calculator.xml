@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/display_screen"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#E0E0E0"
+        android:gravity="center|right"
+        android:paddingRight="24dp"
+        android:paddingBottom="8dp"
+        android:text="0"
+        android:textColor="@android:color/black"
+        android:textSize="90sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_h1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_h2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.40" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_h3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_h4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.70" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_h5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_v1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_v2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_v3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <Button
+        android:id="@+id/btn_ce"
+        style="@style/CalcButton"
+        android:gravity="center"
+        android:text="CE"
+        app:layout_constraintBottom_toTopOf="@id/g_h2"
+        app:layout_constraintEnd_toStartOf="@id/g_v1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/g_h1"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_c"
+        style="@style/CalcButton"
+        android:gravity="center"
+        android:text="C"
+        app:layout_constraintBottom_toTopOf="@id/g_h2"
+        app:layout_constraintEnd_toStartOf="@id/g_v2"
+        app:layout_constraintStart_toStartOf="@id/g_v1"
+        app:layout_constraintTop_toBottomOf="@id/g_h1"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_bs"
+        style="@style/CalcButton"
+        android:gravity="center"
+        android:text="BS"
+        app:layout_constraintBottom_toTopOf="@id/g_h2"
+        app:layout_constraintEnd_toStartOf="@id/g_v3"
+        app:layout_constraintStart_toStartOf="@id/g_v2"
+        app:layout_constraintTop_toBottomOf="@id/g_h1"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_div"
+        style="@style/CalcButton"
+        android:gravity="center"
+        android:text="/"
+        app:layout_constraintBottom_toTopOf="@id/g_h2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/g_v3"
+        app:layout_constraintTop_toBottomOf="@id/g_h1"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_7"
+        style="@style/CalcButtonNumber"
+        android:gravity="center"
+        android:text="7"
+        app:layout_constraintBottom_toTopOf="@id/g_h3"
+        app:layout_constraintEnd_toStartOf="@id/g_v1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/g_h2"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_8"
+        style="@style/CalcButtonNumber"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="8"
+        app:layout_constraintBottom_toTopOf="@id/g_h3"
+        app:layout_constraintEnd_toStartOf="@id/g_v2"
+        app:layout_constraintStart_toStartOf="@id/g_v1"
+        app:layout_constraintTop_toBottomOf="@id/g_h2"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_9"
+        style="@style/CalcButtonNumber"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="9"
+        app:layout_constraintBottom_toTopOf="@id/g_h3"
+        app:layout_constraintEnd_toStartOf="@id/g_v3"
+        app:layout_constraintStart_toStartOf="@id/g_v2"
+        app:layout_constraintTop_toBottomOf="@id/g_h2"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_mul"
+        style="@style/CalcButton"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="x"
+        app:layout_constraintBottom_toTopOf="@id/g_h3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/g_v3"
+        app:layout_constraintTop_toBottomOf="@id/g_h2"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_4"
+        style="@style/CalcButtonNumber"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="4"
+        app:layout_constraintBottom_toTopOf="@id/g_h4"
+        app:layout_constraintEnd_toStartOf="@id/g_v1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/g_h3"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_5"
+        style="@style/CalcButtonNumber"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="5"
+        app:layout_constraintBottom_toTopOf="@id/g_h4"
+        app:layout_constraintEnd_toStartOf="@id/g_v2"
+        app:layout_constraintStart_toStartOf="@id/g_v1"
+        app:layout_constraintTop_toBottomOf="@id/g_h3"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_6"
+        style="@style/CalcButtonNumber"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="6"
+        app:layout_constraintBottom_toTopOf="@id/g_h4"
+        app:layout_constraintEnd_toStartOf="@id/g_v3"
+        app:layout_constraintStart_toStartOf="@id/g_v2"
+        app:layout_constraintTop_toBottomOf="@id/g_h3"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_sub"
+        style="@style/CalcButton"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="-"
+        app:layout_constraintBottom_toTopOf="@id/g_h4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/g_v3"
+        app:layout_constraintTop_toBottomOf="@id/g_h3"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_1"
+        style="@style/CalcButtonNumber"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="1"
+        app:layout_constraintBottom_toTopOf="@id/g_h5"
+        app:layout_constraintEnd_toStartOf="@id/g_v1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/g_h4"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_2"
+        style="@style/CalcButtonNumber"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="2"
+        app:layout_constraintBottom_toTopOf="@id/g_h5"
+        app:layout_constraintEnd_toStartOf="@id/g_v2"
+        app:layout_constraintStart_toStartOf="@id/g_v1"
+        app:layout_constraintTop_toBottomOf="@id/g_h4"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_3"
+        style="@style/CalcButtonNumber"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="3"
+        app:layout_constraintBottom_toTopOf="@id/g_h5"
+        app:layout_constraintEnd_toStartOf="@id/g_v3"
+        app:layout_constraintStart_toStartOf="@id/g_v2"
+        app:layout_constraintTop_toBottomOf="@id/g_h4"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_add"
+        style="@style/CalcButton"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="+"
+        app:layout_constraintBottom_toTopOf="@id/g_h5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/g_v3"
+        app:layout_constraintTop_toBottomOf="@id/g_h4"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_sign"
+        style="@style/CalcButton"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="+/-"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/g_v1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/g_h5"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_0"
+        style="@style/CalcButtonNumber"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/g_v2"
+        app:layout_constraintStart_toStartOf="@id/g_v1"
+        app:layout_constraintTop_toBottomOf="@id/g_h5"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_dot"
+        style="@style/CalcButton"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/g_v3"
+        app:layout_constraintStart_toStartOf="@id/g_v2"
+        app:layout_constraintTop_toBottomOf="@id/g_h5"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_eq"
+        style="@style/CalcButton"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="="
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/g_v3"
+        app:layout_constraintTop_toBottomOf="@id/g_h5"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
