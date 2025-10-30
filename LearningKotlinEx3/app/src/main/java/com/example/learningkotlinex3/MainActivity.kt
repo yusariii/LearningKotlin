@@ -42,6 +42,8 @@ class MainActivity : AppCompatActivity() {
 
         calendarView = findViewById(R.id.calendar_view)
 
+        calendarView.visibility = View.GONE
+
         defaultEditTextBackground = inputFirstName.background
 
         setupDateSelection()
