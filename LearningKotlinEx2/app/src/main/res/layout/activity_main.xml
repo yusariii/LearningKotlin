@@ -158,6 +158,12 @@
                 style="@style/CalcButtonNumber"
                 android:text="0"
                 tools:ignore="HardcodedText,DuplicateSpeakableTextCheck,VisualLintButtonSize" />
+
+            <Button
+                android:id="@+id/btn_decimal"
+                android:text="." style="@style/CalcButton"
+                tools:ignore="HardcodedText,VisualLintButtonSize" />
+
             <Button
                 android:id="@+id/btn_equal"
                 android:text="=" style="@style/CalcButton"
