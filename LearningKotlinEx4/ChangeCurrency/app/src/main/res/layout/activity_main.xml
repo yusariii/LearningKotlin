@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <!-- Hàng 1: From -->
+    <TextView
+        android:id="@+id/tvFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="From"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <Spinner
+        android:id="@+id/spFrom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:background="@color/white"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvFrom"
+        app:layout_constraintTop_toTopOf="@id/tvFrom" />
+
+    <EditText
+        android:id="@+id/etFrom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="0"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/material_dynamic_neutral10"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spFrom"
+        tools:ignore="Autofill,HardcodedText,DuplicateSpeakableTextCheck,VisualLintTextFieldSize" />
+
+    <!-- Hàng 2: To -->
+    <TextView
+        android:id="@+id/tvTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="To"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etFrom"
+        tools:ignore="HardcodedText" />
+
+    <Spinner
+        android:id="@+id/spTo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:background="@color/white"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvTo"
+        app:layout_constraintTop_toTopOf="@id/tvTo" />
+
+    <EditText
+        android:id="@+id/etTo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="0"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/material_dynamic_neutral10"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spTo"
+        tools:ignore="Autofill,HardcodedText,VisualLintTextFieldSize" />
+
+    <!-- Gợi ý tỷ giá -->
+    <TextView
+        android:id="@+id/tvRate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Rate: —"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etTo"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
