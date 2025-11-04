@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:ignore="VisualLintBounds">
+
+    <EditText
+        android:id="@+id/etLimit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập số nguyên N"
+        android:inputType="numberSigned"
+        android:minHeight="48dp"
+        android:textColor="@color/black"
+        android:textColorHint="#546E7A"
+        android:textSize="18sp"
+        tools:ignore="Autofill,HardcodedText,VisualLintTextFieldSize" />
+
+    <RadioGroup
+        android:id="@+id/rgType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <RadioButton
+            android:id="@+id/rbOdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Số lẻ"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/rbPrime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Số nguyên tố"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/rbPerfect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Số hoàn hảo"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rgType2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbEven"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Số chẵn"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/rbSquare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Số chính phương"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/rbFibo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Số Fibonacci"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:text="Không có số nào thỏa mãn"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:visibility="gone"
+        tools:ignore="HardcodedText" />
+
+    <ListView
+        android:id="@+id/lvNumbers"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>
