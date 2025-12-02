@@ -1,36 +1,28 @@
 package com.example.dssv.adapter
 
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dssv.R
 import com.example.dssv.model.Student
 
 class StudentAdapter(
-    private val items: MutableList<Student>,
-    private val onItemClick: (Student, Int) -> Unit,
-    private val onDeleteClick: (Int) -> Unit
+    private val items: List<Student>,
+    private val onItemClick: (position: Int) -> Unit
 ) : RecyclerView.Adapter<StudentAdapter.StudentViewHolder>() {
 
     inner class StudentViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvName: TextView = itemView.findViewById(R.id.tvName)
         val tvId: TextView = itemView.findViewById(R.id.tvId)
-        private val btnDelete: ImageButton = itemView.findViewById(R.id.btnDelete)
 
         init {
             itemView.setOnClickListener {
                 val pos = bindingAdapterPosition
                 if (pos != RecyclerView.NO_POSITION) {
-                    onItemClick(items[pos], pos)
-                }
-            }
-            btnDelete.setOnClickListener {
-                val pos = bindingAdapterPosition
-                if (pos != RecyclerView.NO_POSITION) {
-                    onDeleteClick(pos)
+                    onItemClick(pos)
                 }
             }
         }
@@ -43,9 +35,9 @@ class StudentAdapter(
     }
 
     override fun onBindViewHolder(holder: StudentViewHolder, position: Int) {
-        val student = items[position]
-        holder.tvName.text = student.name
-        holder.tvId.text = student.id
+        val s = items[position]
+        holder.tvName.text = s.name
+        holder.tvId.text = s.id
     }
 
     override fun getItemCount() = items.size
