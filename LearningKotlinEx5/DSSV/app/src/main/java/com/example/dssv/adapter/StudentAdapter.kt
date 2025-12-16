@@ -11,7 +11,7 @@ import com.example.dssv.model.Student
 
 class StudentAdapter(
     private val items: List<Student>,
-    private val onItemClick: (position: Int) -> Unit
+    private val onItemClick: (index: Int) -> Unit
 ) : RecyclerView.Adapter<StudentAdapter.StudentViewHolder>() {
 
     inner class StudentViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -29,9 +29,9 @@ class StudentAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StudentViewHolder {
-        val view = LayoutInflater.from(parent.context)
+        val v = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_student, parent, false)
-        return StudentViewHolder(view)
+        return StudentViewHolder(v)
     }
 
     override fun onBindViewHolder(holder: StudentViewHolder, position: Int) {

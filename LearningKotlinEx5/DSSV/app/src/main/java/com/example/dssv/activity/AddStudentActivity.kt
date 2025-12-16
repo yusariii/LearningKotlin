@@ -27,6 +27,8 @@ class AddStudentActivity : AppCompatActivity() {
         edtAddress = findViewById(R.id.edtAddress)
         btnSave = findViewById(R.id.btnSave)
 
+        
+        
         btnSave.setOnClickListener {
             val id = edtId.text.toString().trim()
             val name = edtName.text.toString().trim()
