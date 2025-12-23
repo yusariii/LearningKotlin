@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 
 class StudentViewModel : ViewModel() {
 
-    private val _students = MutableLiveData<MutableList<Student>>(
+    private val _students = MutableLiveData(
         mutableListOf(
             Student("20200001", "Nguyễn Văn A", "0900000001", "Hà Nội"),
             Student("20200002", "Trần Thị B", "0900000002", "TP.HCM"),
