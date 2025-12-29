@@ -24,8 +24,12 @@ class EditStudentFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = DataBindingUtil.inflate(inflater,
-            R.layout.fragment_edit_student, container, false)
+        binding = DataBindingUtil.inflate(
+            inflater,
+            R.layout.fragment_edit_student,
+            container,
+            false
+        )
         binding.vm = studentViewModel
         binding.lifecycleOwner = viewLifecycleOwner
         return binding.root
@@ -35,8 +39,8 @@ class EditStudentFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         index = arguments?.getInt("index") ?: -1
-        val student = studentViewModel.getStudentAt(index)
 
+        val student = studentViewModel.getStudentAt(index)
         if (student != null) {
             binding.edtId.setText(student.id)
             binding.edtName.setText(student.name)
@@ -45,8 +49,6 @@ class EditStudentFragment : Fragment() {
         }
 
         binding.btnUpdate.setOnClickListener {
-            if (index == -1) return@setOnClickListener
-
             val id = binding.edtId.text.toString().trim()
             val name = binding.edtName.text.toString().trim()
             val phone = binding.edtPhone.text.toString().trim()
@@ -58,9 +60,18 @@ class EditStudentFragment : Fragment() {
                 return@setOnClickListener
             }
 
-            val newStudent = Student(id, name, phone, address)
-            studentViewModel.updateStudent(index, newStudent)
-            findNavController().popBackStack()
+            val ok = studentViewModel.updateStudent(
+                index,
+                Student(id, name, phone, address)
+            )
+
+            if (!ok) {
+                Toast.makeText(requireContext(),
+                    "Cập nhật thất bại", Toast.LENGTH_SHORT).show()
+            } else {
+                findNavController().popBackStack()
+            }
         }
     }
 }
+

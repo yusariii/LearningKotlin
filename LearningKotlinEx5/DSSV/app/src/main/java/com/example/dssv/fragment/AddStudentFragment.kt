@@ -23,8 +23,12 @@ class AddStudentFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = DataBindingUtil.inflate(inflater,
-            R.layout.fragment_add_student, container, false)
+        binding = DataBindingUtil.inflate(
+            inflater,
+            R.layout.fragment_add_student,
+            container,
+            false
+        )
         binding.vm = studentViewModel
         binding.lifecycleOwner = viewLifecycleOwner
         return binding.root
@@ -41,16 +45,21 @@ class AddStudentFragment : Fragment() {
 
             if (id.isEmpty() || name.isEmpty()) {
                 Toast.makeText(requireContext(),
-                    "MSSV và Họ tên không được trống",
-                    Toast.LENGTH_SHORT).show()
+                    "MSSV và Họ tên không được trống", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
-            studentViewModel.addStudent(
+            val ok = studentViewModel.addStudent(
                 Student(id, name, phone, address)
             )
 
-            findNavController().popBackStack()
+            if (!ok) {
+                Toast.makeText(requireContext(),
+                    "MSSV đã tồn tại hoặc lỗi khi thêm", Toast.LENGTH_SHORT).show()
+            } else {
+                findNavController().popBackStack()
+            }
         }
     }
 }
+

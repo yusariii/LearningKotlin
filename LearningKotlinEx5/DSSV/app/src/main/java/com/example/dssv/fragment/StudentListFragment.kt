@@ -19,9 +19,11 @@ class StudentListFragment : Fragment() {
     private val studentViewModel: StudentViewModel by activityViewModels()
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
+        // R.layout.fragment_student_list là layout chứa rvStudents + fabAdd
         return inflater.inflate(R.layout.fragment_student_list, container, false)
     }
 
@@ -50,3 +52,5 @@ class StudentListFragment : Fragment() {
         }
     }
 }
+
+
